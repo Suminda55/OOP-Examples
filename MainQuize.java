@@ -99,7 +99,7 @@ class MainQuize
 {
     public static void main(String args[])
     {
-        // GIVEN OBJECTS FROM QUESTION
+       
         Fish d = new Fish("Jadu");
         Cat c = new Cat("Fluffy");
         Animal a = new Fish("Nemo");
@@ -117,22 +117,22 @@ class MainQuize
         c.play();
         System.out.println("Cat name: " + c.getName());
  
-        a.walk();   // polymorphism: a is Animal but method from Fish runs
+        a.walk();   
         a.eat();
 
-        e.walk();   // polymorphism: e is Animal but method from Spider runs
+        e.walk();  
         e.eat();
 
-        p.play();   // p is Pet interface
+        p.play();   
         System.out.println("Pet name: " + p.getName());
 
         System.out.println("\n===== Casting Objects =====");
 
-        // Casting Animal -> Fish
+        
         Fish f1 = (Fish) a; 
         f1.play();
 
-        // Casting Pet -> Cat
+       
         Cat c2 = (Cat) p;
         c2.eat();
 
@@ -141,19 +141,20 @@ class MainQuize
         Animal poly1 = new Cat("Tommy");
         Animal poly2 = new Fish("Dory");
 
-        poly1.walk();  // Cat's walk()
-        poly2.walk();  // Fish's walk()
+        poly1.walk();  
+        poly2.walk();  
 
-        poly1.eat();   // Cat eat()
-        poly2.eat();   // Fish eat()
+        poly1.eat();  
+        poly2.eat();  
 
         System.out.println("\n===== Using super to Call Superclass Methods =====");
 
         System.out.println("Calling Animal walk() using super inside classes:");
-        // We triggered these already, but here we show examples
+       
 
-        d.walk();  // uses overridden walk in Fish ("Fish cannot walk")
-        c.walk();  // uses Animal walk() because Cat did not override it
-        e.walk();  // Spider overrides walk()
+        d.walk();  
+        c.walk();  
+        e.walk();  
     }
 }
+
